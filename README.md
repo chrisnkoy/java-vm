@@ -1,4 +1,4 @@
-# virtual-machine
+# vm
 Implementation of a virtual machine
 
 ## Introduction
