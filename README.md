@@ -2,7 +2,7 @@
 Implementation of a virtual machine
 
 ## Introduction
-This code was written for an assignment in a Concurrent and Distributed Programming class. It is an implementation of a virtual machine and uses concepts of [concurrent programming](https://www.educative.io/blog/multithreading-and-concurrency-fundamentals) such as multithreading, lock, mutex, and thread safety. 
+This code was written for an assignment in a Concurrent and Distributed Programming class. It is an implementation of a virtual machine and uses concepts of [concurrent programming](https://www.educative.io/blog/multithreading-and-concurrency-fundamentals) such as multithreading, lock, mutex, and thread safety. Some initial code including class declarations were provided by the instructor of the class.
 
 ## How does it work?
 The program reads an input file containing instructions line by line using the ```FileReaderThread``` and stores them into the instructions memory. The ```InstructionsThread``` executes instructions from the instructions memory. There are only 3 tupes of instruction: *create object*, *use object*, *delete object*. The *create object* instruction creates an object and stores it in the object memory and the *delete object* instruction marks an object from the object memory for deletion. The *use object* instruction simply uses an object and marks it as such. Once an instruction is executed, it is automatically deleted from the instructions memory. The ```GarbageCollectionThread``` traverses the object memory and deletes objects that have been marked for deletion.
